@@ -12,7 +12,7 @@ class App extends React.Component{
 
     //new method i.e a function in a class
     FetchAdvice = () => {
-        axios.get();
+        axios.get('https://api.adviceslip.com/advice');
     }
     render() {
         return(
