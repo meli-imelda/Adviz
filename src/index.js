@@ -1,17 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import ReactDom from 'react-dom';           //so that we can hook onto that element in which the whole application is going to be contained in
+
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDom.render(<App />, document.getElementById('root')); 
+//it has two parameters, first the one is the component we want to render;
+// in this case it is the main component which is the App.js and the second; it is the element we want to hook unto
+//in this case it is the root inn index.html, meaning that our whole react application is going to be contained 
+//in this div with id Root
