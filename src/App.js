@@ -8,15 +8,26 @@ class App extends React.Component{
     };
 
     componentDidMount(){
+        this.FetchAdvice();
     }
 
     //new method i.e a function in a class
     FetchAdvice = () => {
-        axios.get('https://api.adviceslip.com/advice');
+        axios.get('https://api.adviceslip.com/advice')
+        .then((response) => {
+            const {advice} = response.data.slip;
+
+            this.setState({advice});
+        })
+        .catch((error) => {
+            
+        });
     }
     render() {
+        const {advice} = this.state;
         return(
-            <h>APP</h>
+            className
+        
         );
     }
 }
